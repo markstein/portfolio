@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Stein - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="hero">
+      <div class="hero-content">
+        <div class="avatar-container">
+          <div class="avatar-placeholder">MS</div>
+        </div>
+        <h1 class="title">Mark Stein</h1>
+        <p class="subtitle">Software Engineer</p>
+        <p class="slogan">"Unus pro omnibus, omnes pro uno"</p>
+      </div>
+      <div class="scroll-indicator">↓</div>
+    </header>
+
+    <main>
+      <section id="skills" class="section">
+        <div class="container">
+          <h2 class="section-title">My Skills</h2>
+          <div class="skills-grid" id="skills-container">
+            <!-- Skills injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">My Projects</h2>
+          <div class="projects-timeline" id="projects-container">
+            <!-- Projects injected by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Mark Stein. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/markstein" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
