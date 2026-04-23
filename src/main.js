@@ -275,7 +275,49 @@ function initData(data) {
   }
 }
 
+const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd'];
+
+function applyTheme() {
+  const hash = window.location.hash.toLowerCase().replace('#', '');
+  document.body.classList.remove(...themes);
+  
+  let activeTheme = 'theme-default';
+
+  if (hash === 'business') {
+    activeTheme = 'theme-business';
+  } else if (hash === 'minimalist') {
+    activeTheme = 'theme-minimalist';
+  } else if (hash === 'nerd') {
+    activeTheme = 'theme-nerd';
+  } else if (hash === 'default') {
+    activeTheme = 'theme-default';
+  } else {
+    // Randomize if no known hash
+    activeTheme = themes[Math.floor(Math.random() * themes.length)];
+  }
+
+  if (activeTheme !== 'theme-default') {
+    document.body.classList.add(activeTheme);
+  }
+
+  const avatarImage = document.querySelector('.avatar-image');
+  if (avatarImage) {
+    if (activeTheme === 'theme-business') {
+      avatarImage.src = '/business.png';
+    } else if (activeTheme === 'theme-minimalist') {
+      avatarImage.src = '/minimalist.png';
+    } else if (activeTheme === 'theme-nerd') {
+      avatarImage.src = '/nerd.png';
+    } else {
+      avatarImage.src = '/default.png';
+    }
+  }
+}
+
+window.addEventListener('hashchange', applyTheme);
+
 document.addEventListener('DOMContentLoaded', () => {
+  applyTheme();
   fetch('/cv.json')
     .then(response => response.json())
     .then(data => {
