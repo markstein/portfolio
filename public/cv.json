@@ -2,12 +2,7 @@
     "person": {
         "name": "Mark Stein",
         "foto": "assets/images/avatar/Profile-Mark.png",
-        "motto": "Unus pro omnibus, omnes pro uno",
-        "others": {
-            "Geburt": "1979 in Stachanov (CCCP)",
-            "Status": "Verheiratet, 3 Kinder",
-            "Sprachen": "Deutsch, Russisch, English, Spanisch (Grundkenntnisse)"
-        }
+        "motto": "Unus pro omnibus, omnes pro uno"
     },
     "projects": [
         {
@@ -406,14 +401,35 @@
             ]
         }
     ],
-    "others": {
-        "Ausbildung": "\u003Cul\u003E\u003Cli\u003E2006 - M.Sc. Informatik an der TU Braunschweig\u003C/li\u003E\u003Cli\u003E2005 - Diplom Informatiker an der TU Braunschweig\u003C/li\u003E\u003C/ul\u003E",
-        "Hobby": "\u003Cul\u003E\u003Cli\u003EBrettspiele spielen und machen\u003C/li\u003E\u003Cli\u003EOutdoor: Wandern, Laufen, Ski, Rugby\u003C/li\u003E\u003Cli\u003ESoftware-Entwickeln: Apps, Websites, Arduino\u003C/li\u003E\u003C/ul\u003E",
-        "Schulungen": "\u003Cul\u003E\u003Cli\u003E2012-2013 : Liferay Portal für Großkonzerne, Qualität- und Effizienzsteigerung durch TDD\u003C/li\u003E\u003C/ul\u003E",
-        "Gebrauchsmuster": "\u003Cul\u003E\u003Cli\u003ENr. 20 2018 003 380 - Verpackung von Lebensmitteln mit einer Vorrichtung zur Markierung des Datums beim Öffnen.\u003C/li\u003E\u003Cli\u003ENr. 20 2014 004 213.6 - Anzeige zur Visualisierung der verbleibenden Fahrzeit bzw. Fahrstrecke, die in einem Fahrzeug befestigt wird.\u003C/li\u003E\u003C/ul\u003E",
-        "Sportliche Tätigkeiten": "\u003Cul\u003E\u003Cli\u003E1996 − 1997 : Mitglied der deutschen Rugby Jugendnationalmannschaft.\u003C/li\u003E\u003C/ul\u003E",
-        "Kontakt": "Mark Stein - m.stein@mosst.de",
-        "Impressum": "\u003Ca href='impressum.html' class='impressum'\u003EImpressum\u003C/a\u003E"
+    "me": {
+        "Bio": [
+            "Familie: Verheiratet, 3 Kinder",
+            "Geburt: 1979 in CCCP",
+            "Sprachen: Deutsch, Russisch, English, Spanisch (Grundkenntnisse)"
+        ],
+        "Ausbildung": [
+            "2006 - M.Sc. Informatik an der TU Braunschweig",
+            "2005 - Diplom Informatiker an der TU Braunschweig"
+        ],
+        "Hobby": [
+            "Brettspiele spielen und machen",
+            "Outdoor: Wandern, Laufen, Ski, Rugby",
+            "Software-Entwickeln: Apps, Websites, Arduino"
+        ],
+        "Schulungen": [
+            "2012-2013 : Liferay Portal für Großkonzerne, Qualität- und Effizienzsteigerung durch TDD"
+        ],
+        "Gebrauchsmuster": [
+            "Nr. 20 2018 003 380 - Verpackung von Lebensmitteln mit einer Vorrichtung zur Markierung des Datums beim Öffnen.",
+            "Nr. 20 2014 004 213.6 - Anzeige zur Visualisierung der verbleibenden Fahrzeit bzw. Fahrstrecke, die in einem Fahrzeug befestigt wird."
+        ],
+        "Sportliche Tätigkeiten": [
+            "1996 − 1997 : Mitglied der deutschen Rugby Jugendnationalmannschaft."
+        ],
+        "Kontakt": [
+            "Mark Stein - m.stein@mosst.de",
+            "<a href='impressum.html'>Impressum</a>"
+        ]
     },
     "copyright": "Mark Stein - 2026"
 }

@@ -18,7 +18,7 @@
     <header class="hero">
       <div class="hero-content">
         <div class="avatar-container">
-          <div class="avatar-placeholder">MS</div>
+          <img src="/face2.png" alt="Mark Stein" class="avatar-image" />
         </div>
         <h1 class="title">Mark Stein</h1>
         <p class="subtitle">Software Engineer</p>
@@ -30,18 +30,36 @@
     <main>
       <section id="skills" class="section">
         <div class="container">
-          <h2 class="section-title">My Skills</h2>
+          <h2 class="section-title">Meine Skills</h2>
           <div class="skills-grid" id="skills-container">
             <!-- Skills injected by JS -->
           </div>
         </div>
       </section>
 
+      <section id="selected-skills" class="section" style="display: none;">
+        <div class="container">
+          <h2 class="section-title">Ausgewählte Skills</h2>
+          <div class="selected-skills-grid" id="selected-skills-container">
+            <!-- Selected skills injected by JS -->
+          </div>
+        </div>
+      </section>
+
       <section id="projects" class="section">
         <div class="container">
-          <h2 class="section-title">My Projects</h2>
+          <h2 class="section-title" id="projects-title">Projekte</h2>
           <div class="projects-timeline" id="projects-container">
             <!-- Projects injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section id="others" class="section">
+        <div class="container">
+          <h2 class="section-title">Über mich</h2>
+          <div class="others-grid" id="others-container">
+            <!-- Others injected by JS -->
           </div>
         </div>
       </section>
@@ -49,7 +67,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2026 Mark Stein. All rights reserved.</p>
+        <p>&copy; 2026 Mark Stein. Alle Rechte vorbehalten.</p>
         <div class="footer-links">
           <a href="https://github.com/markstein" target="_blank" rel="noopener">GitHub</a>
           <a href="#" target="_blank" rel="noopener">LinkedIn</a>
