@@ -303,13 +303,13 @@ function applyTheme() {
   const avatarImage = document.querySelector('.avatar-image');
   if (avatarImage) {
     if (activeTheme === 'theme-business') {
-      avatarImage.src = '/business.png';
+      avatarImage.src = 'business.png';
     } else if (activeTheme === 'theme-minimalist') {
-      avatarImage.src = '/minimalist.png';
+      avatarImage.src = 'minimalist.png';
     } else if (activeTheme === 'theme-nerd') {
-      avatarImage.src = '/nerd.png';
+      avatarImage.src = 'nerd.png';
     } else {
-      avatarImage.src = '/default.png';
+      avatarImage.src = 'default.png';
     }
   }
 }
@@ -318,7 +318,7 @@ window.addEventListener('hashchange', applyTheme);
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
-  fetch('/cv.json')
+  fetch('cv.json')
     .then(response => response.json())
     .then(data => {
       initData(data);
