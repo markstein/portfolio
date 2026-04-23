@@ -36,7 +36,7 @@ function renderSkills() {
     const span = document.createElement('span');
     span.className = `skill-tag ${levelInfo.class}`;
     
-    span.innerHTML = `<span class="skill-pie" title="${levelInfo.label}" style="background: conic-gradient(currentColor ${levelInfo.percentage}%, transparent 0);"></span> ${skill}`;
+    span.innerHTML = `${skill} <span class="skill-pie" title="${levelInfo.label}" style="background: conic-gradient(currentColor ${levelInfo.percentage}%, transparent 0);"></span>`;
     
     span.addEventListener('click', () => {
       if (selectedSkills.has(skill)) {
