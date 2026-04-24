@@ -93,7 +93,7 @@ const observer = new IntersectionObserver((entries) => {
 function renderSelectedSkillsDetails() {
   const section = document.getElementById('selected-skills');
   const container = document.getElementById('selected-skills-container');
-  
+
   if (!section || !container) return;
 
   if (selectedSkills.size === 0) {
@@ -145,23 +145,23 @@ function renderSelectedSkillsDetails() {
 
 function renderProjects() {
   renderSelectedSkillsDetails();
-  
+
   const container = document.getElementById('projects-container');
   container.innerHTML = '';
-  
+
   let projectsToRender = projects;
   const projectsTitle = document.getElementById('projects-title');
-  
+
   if (selectedSkills.size > 0) {
     projectsToRender = projects.map(p => {
       const matchCount = p.tech.filter(t => selectedSkills.has(t)).length;
       return { ...p, matchCount };
     }).filter(p => p.matchCount > 0);
-    
+
     if (projectsTitle) {
       projectsTitle.textContent = `Ausgewählte Projekte [${projectsToRender.length}/${projects.length}]`;
     }
-    
+
     projectsToRender.sort((a, b) => {
       if (b.matchCount !== a.matchCount) {
         return b.matchCount - a.matchCount;
@@ -177,7 +177,10 @@ function renderProjects() {
   projectsToRender.forEach((project, index) => {
     const card = document.createElement('div');
     card.className = 'project-card';
-    card.style.animationDelay = `${index * 0.1}s`;
+    card.style.animationDelay = `${index * 0.04}s`;
+    // Store year for scroll indicator
+    const refDate = project.toDate || project.fromDate;
+    if (refDate) card.dataset.year = new Date(refDate).getFullYear();
 
     let dateStr = '';
     if (project.fromDate) {
@@ -277,10 +280,56 @@ function initData(data) {
 
 const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd'];
 
+// ── Scroll Year Indicator ──────────────────────────────────────────────────
+let scrollYearEl = null;
+let scrollHideTimer = null;
+
+function createScrollYearIndicator() {
+  scrollYearEl = document.createElement('div');
+  scrollYearEl.id = 'scroll-year-indicator';
+  scrollYearEl.innerHTML = '<span class="syi-year">2026</span>';
+  document.body.appendChild(scrollYearEl);
+}
+
+function updateScrollYearIndicator() {
+  const projectsSection = document.getElementById('projects');
+  if (!projectsSection || !scrollYearEl) return;
+
+  const sectionRect = projectsSection.getBoundingClientRect();
+  // Only active while projects section is in view
+  if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) return;
+
+  // Find the project card closest to the upper third of the viewport
+  const cards = projectsSection.querySelectorAll('.project-card');
+  let bestCard = null;
+  let bestDist = Infinity;
+  const targetY = window.innerHeight * 0.35;
+
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+    const dist = Math.abs(rect.top - targetY);
+    if (dist < bestDist) {
+      bestDist = dist;
+      bestCard = card;
+    }
+  });
+
+  if (bestCard && bestCard.dataset.year) {
+    scrollYearEl.querySelector('.syi-year').textContent = bestCard.dataset.year;
+    scrollYearEl.classList.add('visible');
+  }
+
+  clearTimeout(scrollHideTimer);
+  scrollHideTimer = setTimeout(() => {
+    scrollYearEl.classList.remove('visible');
+  }, 1000);
+}
+
 function applyTheme() {
   const hash = window.location.hash.toLowerCase().replace('#', '');
   document.body.classList.remove(...themes);
-  
+
   let activeTheme = 'theme-default';
 
   if (hash === 'business') {
@@ -318,6 +367,8 @@ window.addEventListener('hashchange', applyTheme);
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
+  createScrollYearIndicator();
+  window.addEventListener('scroll', updateScrollYearIndicator, { passive: true });
   fetch('cv.json')
     .then(response => response.json())
     .then(data => {
