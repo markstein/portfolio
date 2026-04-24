@@ -429,6 +429,112 @@ body {
 }
 
 /* THEMES */
+/* ================================================ */
+/* RESPONSIVE – Mobile                              */
+/* ================================================ */
+@media (max-width: 640px) {
+
+  /* Container */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100svh;
+    padding: 2rem 1rem;
+  }
+
+  .avatar-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .slogan {
+    font-size: 0.95rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    gap: 0.35rem;
+  }
+
+  .skill-tag {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .deselect-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  /* Selected Skills */
+  .selected-skills-grid {
+    gap: 0.75rem;
+  }
+
+  .selected-skill-card {
+    min-width: unset;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Projects */
+  .project-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-date {
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+
+  /* Others */
+  .others-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .other-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+}
+
+/* THEMES */
+
 /* Business Formal */
 body.theme-business {
   --bg-primary: #f8f9fa;
