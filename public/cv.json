@@ -6,6 +6,66 @@
     },
     "projects": [
         {
+            "name": "Migration von Kunden-Verbund-Portal",
+            "role": "Software-Entwickler, QA-Lead",
+            "customer": "remote",
+            "description": "Migration eines Kundenportals für Verkauf und Verwaltung von Fahrscheinen des öffentlichen Verkehrsmittels. Im Zuge der Migration wurde das Bestandsportal auf moderne Architektur und Technologie Schritt für Schritt portiert.",
+            "fromDate": "2023-09-01",
+            "toDate": "2026-04-30",
+            "skills": [
+                "TypeScript",
+                "Node.js",
+                "Vue.js",
+                "GitLab",
+                "GitLab Pipeline",
+                "Playwright",
+                "Jest",
+                "Puppeteer",
+                "Cucumber",
+                "Storybook",
+                "Docker",
+                "nginx",
+                "Kubernetes",
+                "Scrum",
+                "SAFe Agile Framework",
+                "Continuous Integration",
+                "IntelliJ",
+                "VS Code",
+                "Figma",
+                "Jira",
+                "Confluence",
+                "Microsoft Teams"
+            ]
+        },
+        {
+            "name": "Internationales Zollmanagement-System",
+            "role": "Software-Entwickler",
+            "customer": "ITZBund",
+            "description": "EDV-Management für Zollangelegenheiten auf internationaler und Bundesebene. Das System wurde auf Beantragung der EU in Zusammenarbeit mit dem Bund aufgestellt.",
+            "fromDate": "2021-09-01",
+            "toDate": "2023-08-31",
+            "skills": [
+                "Java",
+                "JBoss Application Server",
+                "Kafka",
+                "Angular",
+                "NgRx",
+                "TypeScript",
+                "JAX-RS",
+                "REST",
+                "OpenAPI",
+                "Swagger",
+                "Camunda",
+                "Maven",
+                "Jersey",
+                "Mockito",
+                "IntelliJ",
+                "Eclipse",
+                "Git",
+                "Jira"
+            ]
+        },
+        {
             "name": "SPA: Developer-Portfolio",
             "role": "PO, Entwickler",
             "customer": "open source project",
@@ -17,9 +77,10 @@
                     "name": "Angular",
                     "version": "7"
                 },
+                "NgRx",
                 "Angular-Material",
                 "Travis-CI",
-                "VS-Code",
+                "VS Code",
                 "Git",
                 "GitHub",
                 "npm",
@@ -33,12 +94,13 @@
             "customer": "IBM",
             "description": "Migration der EDV-Systeme für die Stammdaten- und Kundenverwaltung von legacy Fat-Clients auf moderne webbasierte Technologie.",
             "fromDate": "2018-06-01",
-            "toDate": "",
+            "toDate": "2021-09-30",
             "skills": [
                 {
                     "name": "Angular",
                     "version": "6"
                 },
+                "NgRx",
                 "JSP",
                 "LDAP",
                 {
@@ -46,7 +108,7 @@
                     "version": "8"
                 },
                 "Eclipse",
-                "VS-Code",
+                "VS Code",
                 "SVN",
                 "Jira",
                 "Ant",
@@ -121,7 +183,7 @@
             "name": "Hotel-Recherche und -Aufbereitungssystem",
             "role": "Entwickler",
             "customer": "TUI",
-            "description": "Import und das Zusammenfügen der Hotele aus verschiedenen Bad-Banks in einen gemeinsammen Pool für weitere Aufbereitung.",
+            "description": "Import und das Zusammenfügen der Hotels aus verschiedenen Bad-Banks in einen gemeinsamen Pool für weitere Aufbereitung.",
             "fromDate": "2017-05-01",
             "toDate": "2018-04-30",
             "skills": [
@@ -130,6 +192,7 @@
                 "Vaadin",
                 "Oracle",
                 "Docker",
+                "nginx",
                 "Jenkins",
                 "JUnit",
                 "Selenium",
@@ -158,8 +221,9 @@
                 "AngularJS",
                 "Git",
                 "Docker",
+                "nginx",
                 "Spring-Boot",
-                "Junit",
+                "JUnit",
                 "Selenium"
             ]
         },
@@ -180,7 +244,7 @@
                 "Eclipse",
                 "Ant",
                 "Jenkins",
-                "Junit",
+                "JUnit",
                 "Selenium",
                 "Mockito"
             ]
@@ -213,7 +277,7 @@
             "name": "s2me : Stairway to Mount Everest",
             "role": "PO, Architekt, Entwickler",
             "customer": "s2me",
-            "description": "In dem Projekt geht es darum Bewegung und Spaß in den Büroalltag zu integrieren und so für fitte und motivierte Mitarbeiter zu sorgen. Dabei handelt es sich um ein Online-Spiel, welches einen dazu motivieren soll öfter einmal die Treppen zu nehmen und den Fahrstuhl links liegen zu lassen.      Nach jedem Treppensteigen hat man die Möglichkeit dies auf der S2ME Seite einzugeben und so virtuell den Mount Everest zu erklimmen. Auf der Homepage sieht man seine eigene Position auf dem Berg, sowie die seiner Kollegen. Durch jeden Treppenaufstieg ist man seinem Ziel wieder ein Stück näher. So sorgt S2ME nicht nur für fittere und gesündere Mitarbeiter, es verbreitet sich auch ganz schnell eine lockere und spaßige Atmosphäre am Arbeitsplatz. Denn jetzt haben alle das gleiche Ziel. Die Spitze des Mount Everest!",
+            "description": "In dem Projekt geht es darum Bewegung und Spaß in den Büroalltag zu integrieren und so für fitte und motivierte Mitarbeiter zu sorgen. Dabei handelt es sich um ein Online-Spiel, welches einen dazu motivieren soll öfter einmal die Treppen zu nehmen und den Fahrstuhl links liegen zu lassen. Nach jedem Treppensteigen hat man die Möglichkeit dies auf der S2ME Seite einzugeben und so virtuell den Mount Everest zu erklimmen.",
             "fromDate": "2015-11-01",
             "toDate": "2016-08-31",
             "skills": [
@@ -225,7 +289,9 @@
                     "name": "Angular",
                     "version": "2"
                 },
-                "Docker"
+                "NgRx",
+                "Docker",
+                "nginx"
             ]
         },
         {
