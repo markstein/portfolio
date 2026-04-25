@@ -177,7 +177,6 @@ function renderProjects() {
   projectsToRender.forEach((project, index) => {
     const card = document.createElement('div');
     card.className = 'project-card';
-    card.style.animationDelay = `${index * 0.04}s`;
     // Store year for scroll indicator
     const refDate = project.toDate || project.fromDate;
     if (refDate) card.dataset.year = new Date(refDate).getFullYear();
@@ -204,7 +203,6 @@ function renderProjects() {
       </div>
     `;
     container.appendChild(card);
-    observer.observe(card);
   });
 }
 
@@ -228,7 +226,6 @@ function renderOthers() {
       <div class="other-content">${contentHtml}</div>
     `;
     container.appendChild(card);
-    observer.observe(card);
   });
 }
 

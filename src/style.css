@@ -239,12 +239,6 @@ body {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--glass-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.project-card.visible {
-  animation: slideUp 0.25s ease-out forwards;
 }
 
 .project-card:hover {
@@ -321,12 +315,7 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--glass-shadow);
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.other-card.visible {
-  animation: slideUp 0.25s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .other-card:hover {
