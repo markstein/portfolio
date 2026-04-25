@@ -9,7 +9,7 @@
             "name": "Migration von Kunden-Verbund-Portal",
             "role": "Software-Entwickler, QA-Lead",
             "customer": "remote",
-            "description": "Migration eines Kundenportals für Verkauf und Verwaltung von Fahrscheinen des öffentlichen Verkehrsmittels. Im Zuge der Migration wurde das Bestandsportal auf moderne Architektur und Technologie Schritt für Schritt portiert.",
+            "description": "Migration eines Kundenportals für Verkauf und Verwaltung von Fahrscheinen des öffentlichen Personenverkehrs (ÖPV). Schrittweise Portierung des Bestandsportals auf eine moderne Architektur und aktuelle Web-Technologien.",
             "fromDate": "2023-09-01",
             "toDate": "2026-04-30",
             "skills": [
@@ -34,14 +34,17 @@
                 "Figma",
                 "Jira",
                 "Confluence",
-                "Microsoft Teams"
+                "Microsoft Teams",
+                "REST",
+                "JSON",
+                "CI/CD"
             ]
         },
         {
             "name": "Internationales Zollmanagement-System",
             "role": "Software-Entwickler",
             "customer": "ITZBund",
-            "description": "EDV-Management für Zollangelegenheiten auf internationaler und Bundesebene. Das System wurde auf Beantragung der EU in Zusammenarbeit mit dem Bund aufgestellt.",
+            "description": "Konzeption und Entwicklung eines IT-Systems für das internationale Zollmanagement auf Bundes- und EU-Ebene. Das Projekt wurde im Auftrag der EU in enger Zusammenarbeit mit Bundesbehörden realisiert.",
             "fromDate": "2021-09-01",
             "toDate": "2023-08-31",
             "skills": [
@@ -64,14 +67,16 @@
                 "Git",
                 "GitHub",
                 "GitHub Actions",
-                "Jira"
+                "Jira",
+                "Spring Boot",
+                "Microservices"
             ]
         },
         {
             "name": "SPA: Developer-Portfolio",
             "role": "PO, Entwickler",
             "customer": "open source project",
-            "description": "Single Page Application for overview of developer portfolio and smart aggregation of developer skills.",
+            "description": "Entwicklung einer hochperformanten Single Page Application (SPA) zur professionellen Präsentation des Entwickler-Portfolios sowie zur intelligenten Aggregation und Visualisierung von technischen Skills.",
             "fromDate": "2019-03-01",
             "toDate": "2019-04-30",
             "skills": [
@@ -87,14 +92,17 @@
                 "GitHub",
                 "npm",
                 "SCSS",
-                "Sass"
+                "Sass",
+                "HTML5",
+                "CSS3",
+                "Responsive Design"
             ]
         },
         {
             "name": "Webbasiertes EDV-System für Stammdaten und Kundenverwaltung",
             "role": "Entwickler",
             "customer": "IBM",
-            "description": "Migration der EDV-Systeme für die Stammdaten- und Kundenverwaltung von legacy Fat-Clients auf moderne webbasierte Technologie.",
+            "description": "Transformation und Migration legacy-basierter Fat-Client-Systeme für die Stammdaten- und Kundenverwaltung hin zu einer modernen, webbasierten Architektur auf Basis von Angular.",
             "fromDate": "2018-06-01",
             "toDate": "2021-09-30",
             "skills": [
@@ -116,14 +124,18 @@
                 "Ant",
                 "Maven",
                 "Git",
-                "Bitbucket"
+                "Bitbucket",
+                "REST",
+                "JSON",
+                "HTML5",
+                "CSS3"
             ]
         },
         {
             "name": "Migration Vaadin 7 auf Vaadin 8",
             "role": "Entwickler",
             "customer": "Symeda GmbH",
-            "description": "Migration eines bestehendes EDV Systems im Bereich medizinische Stammdatenverwaltung von Vaadin 7 auf Vaadin 8. Dabei soll eine legacy UI auf Responsive Webdesign umgestellt werden.",
+            "description": "Migration eines bestehenden Systems zur medizinischen Stammdatenverwaltung von Vaadin 7 auf Vaadin 8. Fokus lag auf der Modernisierung der Legacy-UI hin zu einem responsiven und benutzerfreundlichen Design.",
             "fromDate": "2018-09-01",
             "toDate": "2018-12-31",
             "skills": [
@@ -141,14 +153,17 @@
                 "PostgreSQL",
                 "Ant",
                 "SVN",
-                "Git"
+                "Git",
+                "Java",
+                "HTML5",
+                "CSS3"
             ]
         },
         {
             "name": "FitterYOU - Dein Personal Trainer: Fitness-App",
             "role": "Entwickler",
             "customer": "Effit.com",
-            "description": "Sport und Fitness App",
+            "description": "Entwicklung einer umfassenden Sport- und Fitness-Applikation zur personalisierten Trainingsplanung und -begleitung.",
             "fromDate": "2017-11-01",
             "toDate": "2018-06-30",
             "skills": [
@@ -178,14 +193,17 @@
                 "Slack",
                 "DBeaver",
                 "Bitbucket",
-                "Kanban"
+                "Kanban",
+                "REST",
+                "JSON",
+                "Hibernate"
             ]
         },
         {
             "name": "Hotel-Recherche und -Aufbereitungssystem",
             "role": "Entwickler",
             "customer": "TUI",
-            "description": "Import und das Zusammenfügen der Hotels aus verschiedenen Bad-Banks in einen gemeinsamen Pool für weitere Aufbereitung.",
+            "description": "Konzeption und Implementierung eines Systems zum automatisierten Import, zur Konsolidierung und Aufbereitung von Hoteldaten aus heterogenen Datenquellen (Bad-Banks) in einen zentralen Datenpool.",
             "fromDate": "2017-05-01",
             "toDate": "2018-04-30",
             "skills": [
@@ -207,14 +225,15 @@
                 "DBeaver",
                 "Swagger",
                 "SVN",
-                "Git"
+                "Git",
+                "Spring Boot"
             ]
         },
         {
             "name": "Einkauf und Lieferantenportal",
             "role": "Team-Lead",
             "customer": "Volkswagen AG",
-            "description": "Personifizierung bestehendes Einkauf und Lieferantenportal.",
+            "description": "Individualisierung und Personalisierung eines bestehenden Einkaufs- und Lieferantenportals zur Optimierung der Benutzererfahrung und Prozessintegration.",
             "fromDate": "2017-02-01",
             "toDate": "2017-03-31",
             "skills": [
@@ -226,14 +245,16 @@
                 "nginx",
                 "Spring-Boot",
                 "JUnit",
-                "Selenium"
+                "Selenium",
+                "REST",
+                "JSON"
             ]
         },
         {
             "name": "Webportal für Trainingszentren",
             "role": "Architekt, Entwickler",
             "customer": "DFB",
-            "description": "Technische Konzeption und Entwicklung eines Webportals für Trainer und Trainingszentren.",
+            "description": "Ganzheitliche technische Konzeption und Full-Stack-Entwicklung eines spezialisierten Webportals zur Unterstützung von Trainern und zur effizienten Verwaltung von Trainingszentren.",
             "fromDate": "2016-11-01",
             "toDate": "2017-02-28",
             "skills": [
@@ -248,14 +269,16 @@
                 "Jenkins",
                 "JUnit",
                 "Selenium",
-                "Mockito"
+                "Mockito",
+                "REST",
+                "JSP"
             ]
         },
         {
             "name": "Internationalisierung des Portals fussball.de",
             "role": "Entwickler",
             "customer": "DFB",
-            "description": "Technische Konzeption und Entwicklung der Internationalisierung",
+            "description": "Strategische Konzeption und technische Implementierung der Internationalisierung für das Portal fussball.de zur Erschließung globaler Nutzergruppen.",
             "fromDate": "2015-12-01",
             "toDate": "2016-11-30",
             "skills": [
@@ -272,14 +295,16 @@
                 "SVN",
                 "Git",
                 "Eclipse",
-                "Groovy"
+                "Groovy",
+                "JavaScript",
+                "REST"
             ]
         },
         {
             "name": "s2me : Stairway to Mount Everest",
             "role": "PO, Architekt, Entwickler",
             "customer": "s2me",
-            "description": "In dem Projekt geht es darum Bewegung und Spaß in den Büroalltag zu integrieren und so für fitte und motivierte Mitarbeiter zu sorgen. Dabei handelt es sich um ein Online-Spiel, welches einen dazu motivieren soll öfter einmal die Treppen zu nehmen und den Fahrstuhl links liegen zu lassen. Nach jedem Treppensteigen hat man die Möglichkeit dies auf der S2ME Seite einzugeben und so virtuell den Mount Everest zu erklimmen.",
+            "description": "Entwicklung einer Gamification-Plattform zur Förderung der Gesundheit am Arbeitsplatz. Mitarbeiter werden motiviert, Treppen statt Aufzüge zu nutzen, wobei die Leistung in einen virtuellen Aufstieg des Mount Everest übersetzt wird.",
             "fromDate": "2015-11-01",
             "toDate": "2016-08-31",
             "skills": [
@@ -293,14 +318,16 @@
                 },
                 "NgRx",
                 "Docker",
-                "nginx"
+                "nginx",
+                "REST",
+                "JSON"
             ]
         },
         {
             "name": "Migration von Liferay-Portal zur SPA (Single Page Application)",
             "role": "Team-Lead",
             "customer": "Volkswagen AG",
-            "description": "Technische Konzeption der Migration und Releaseplanung. Entwicklung von dynamischen Komponenten auf REST- & AngularJS-Basis. Hierbei wurden Liferay-Portlets zur genannten Technologien migriert.",
+            "description": "Strategische Konzeption und Durchführung der Migration eines Liferay-Portals zu einer modernen Single Page Application (SPA). Umfasst Releaseplanung sowie die Neuentwicklung von Portlets auf Basis von REST und AngularJS.",
             "fromDate": "2015-05-01",
             "toDate": "2015-11-30",
             "skills": [
@@ -319,7 +346,7 @@
             "name": "Realisierung und Integration eines Unternehmensportals auf Liferay Basis",
             "role": "Team-Lead",
             "customer": "Volkswagen AG",
-            "description": "Technische Konzeption. Releaseplanung. Erstellung von Forum- und Mediathek-Portlet (Java, REST, AngularJS). Aufstellung von Continuous Integration (Jenkins, Ant). Integration des Usermanagements ins Portal. Umsetzung der Testautomatisierung (Selenium, JUnit, Mockito, PowerMock). Anbindung CMS ans Portal (Liferay, FirstSpirit)",
+            "description": "Ganzheitliche Realisierung eines Enterprise-Portals auf Liferay-Basis. Aufgabenbereiche: Technische Konzeption, Releaseplanung, Entwicklung spezialisierter Portlets (Forum, Mediathek) sowie Aufbau einer robusten CI/CD-Pipeline.",
             "fromDate": "2013-01-01",
             "toDate": "2015-04-30",
             "skills": [
@@ -343,7 +370,7 @@
             "name": "Web-Applikation für Foto-Management",
             "role": "Entwickler",
             "customer": "MOSST",
-            "description": "Konzeption (Wireframe, Mockup)\n Umsetzung von Backend (Java, RESTEasy, Google App Engine)\n Usermanagement (OAuth 2.0, OpenID)\n Frontend (AngularJS)",
+            "description": "Full-Stack-Entwicklung einer Web-Applikation für effizientes Foto-Management. Von der Konzeption (Wireframing/Mockups) über die Backend-Implementierung mittels Java auf der Google App Engine bis hin zum Frontend-Design mit AngularJS.",
             "fromDate": "2013-06-01",
             "toDate": "2013-09-01",
             "skills": [
@@ -358,7 +385,7 @@
             "name": "Android App: Notizen",
             "role": "Entwickler",
             "customer": "MOSST",
-            "description": "Applikation zum schnellen versenden von Notizen.",
+            "description": "Entwicklung einer nativen Android-Applikation zum schnellen Erfassen und Versenden von Notizen.",
             "fromDate": "2013-05-01",
             "toDate": "2014-01-31",
             "skills": [
@@ -370,7 +397,7 @@
             "name": "Migration eines Unternehmensportals von WebSphere nach Liferay",
             "role": "Architekt, Entwickler",
             "customer": "Volkswagen AG",
-            "description": "Technische Konzeption\n  Erstellung von Portlets, Layouts, Templates, Hooks und Services für Liferay\n Customizing CMS (Liferay)\n User Berechtigungskonzept\n Integration Usermanagement",
+            "description": "Strategische Migration einer Enterprise-Portal-Lösung von IBM WebSphere zu Liferay. Verantwortlich für die technische Konzeption, das Customizing des CMS sowie die Entwicklung maßgeschneiderter Portlets, Hooks und Services.",
             "fromDate": "2012-01-01",
             "toDate": "2013-12-31",
             "skills": [
@@ -393,7 +420,7 @@
             "name": "Enterpriseportal - Umsetzung und Integration in bestehnde Infrastruktur",
             "role": "Konsultat, Entwickler",
             "customer": "Volkswagen AG",
-            "description": "Projektinhalte:\n Technische Konzeption und Architektur (Enterprise Architect)\n Aufbau von Portal-Infrastruktur\n Erstellung von Portlets, Layouts, Templates, Hooks und Services für Liferay\n Integration in bestehende Applikation-Landschaft (SOA, Axis)",
+            "description": "Entwicklung und Integration eines Enterprise-Portals in eine bestehende IT-Infrastruktur. Fokus auf technischer Architekturplanung, Aufbau der Portal-Infrastruktur und Integration in eine SOA-Landschaft mittels WebServices (Axis 2).",
             "fromDate": "2011-03-01",
             "toDate": "2012-02-29",
             "skills": [
@@ -415,7 +442,7 @@
             "name": "Studentisches Portal für TU Braunschweig",
             "role": "Team-Lead",
             "customer": "TU Braunschweig",
-            "description": "Projektbeschreibung:\n Für die Vereinheitlichung diverse webbasierte Systeme an der TU-Braunschweig wurde ein Stundenportal auf Basis von Liferay-Portal entwickelt und eingesetzt. Es wurde ein einheitliches Nutzerverwaltungssystem und Single-Sign-On (SSO) auf Basis von CAS-Server eingeführt. Einzelne Applikationen wurden in Form von Portlets in das Portal integriert. Hierdurch waren Studierende in der Lage ein individuelles Dashboard nach ihren Vorlieben zu gestallten.",
+            "description": "Konzeption und Implementierung eines zentralen Studierendenportals an der TU Braunschweig zur Konsolidierung heterogener Websysteme. Einführung eines einheitlichen Nutzerverwaltungssystems und SSO (Single Sign-On) auf CAS-Basis.",
             "fromDate": "2008-11-01",
             "toDate": "2011-02-28",
             "skills": [
@@ -435,7 +462,7 @@
             "name": "Campusmap: Webbasierte Karte der Unigelände mit Suchmöglichkeit",
             "role": "Technische Projektleiter, Entwickler",
             "customer": "TU Braunschweig",
-            "description": "In Rahmen des Stundenportals wurde eine webbasierte Karte der Unigelände. Ein der Schwerpunkte war die Abbildung der Instituts- und Lehrräume auf der Karte, sowie die Suche nach Gebäuden, Räumen und Instituten.",
+            "description": "Entwicklung der 'Campusmap', einer interaktiven, webbasierten Karte der Universitätsgelände. Schwerpunkt lag auf der georeferenzierten Abbildung von Lehrräumen und Instituten sowie der Implementierung einer leistungsfähigen Suchfunktion.",
             "fromDate": "2010-06-01",
             "toDate": "2010-09-30",
             "skills": [
@@ -456,7 +483,7 @@
             "name": "Web-Applikation für Modulhandbuch-Management",
             "role": "Team-Lead",
             "customer": "TU Braunschweig",
-            "description": "In Folge des Bologna-Prozesses, bei der Umstellung der Studiengänge von Diplom auf Bachelor & Master, wurde an der TU-Braunschweig ein Web-Portal für die Erstellung und Verwaltung der Modulhandbücher entwickelt. In diesem Portal werden die Module von den Institutsmitarbeitern gepflegt. Die Studiengagnsverantwortlichen sind zuständig für das Zusammenstellen der Module zu einem Gesamtstudiengang. Für Studierende wird hierdurch ein Modulhandbuch für ihren Studiengang in elektronische Form vom System bereitgestellt. Das Portal wurde um weitere Schnittstellen zur StudIP und HIS erweitert.",
+            "description": "Entwicklung eines webbasierten Systems zur effizienten Erstellung und Verwaltung von Modulhandbüchern im Zuge des Bologna-Prozesses. Das System unterstützt den Workflow von der Moduleingabe bis zur Studiengangszusammenstellung.",
             "fromDate": "2005-09-01",
             "toDate": "2008-09-30",
             "skills": [
@@ -473,19 +500,19 @@
         "Bio": [
             "Familie: Verheiratet, 3 Kinder",
             "Geburt: 1979 in CCCP",
-            "Sprachen: Deutsch, Russisch, English, Spanisch (Grundkenntnisse)"
+            "Sprachen: Deutsch, Russisch, Englisch, Spanisch (Grundkenntnisse)"
         ],
         "Ausbildung": [
             "2006 - M.Sc. Informatik an der TU Braunschweig",
-            "2005 - Diplom Informatiker an der TU Braunschweig"
+            "2005 - Diplom-Informatiker an der TU Braunschweig"
         ],
         "Hobby": [
             "Brettspiele spielen und machen",
-            "Outdoor: Wandern, Laufen, Ski, Rugby",
-            "Software-Entwickeln: Apps, Websites, Arduino"
+            "Outdoor: Wandern, Laufen, Skifahren, Rugby",
+            "Softwareentwicklung: Apps, Websites, Arduino"
         ],
         "Schulungen": [
-            "2012-2013 : Liferay Portal für Großkonzerne, Qualität- und Effizienzsteigerung durch TDD"
+            "2012-2013 : Liferay Portal für Großkonzerne, Qualitäts- und Effizienzsteigerung durch TDD"
         ],
         "Gebrauchsmuster": [
             "Nr. 20 2018 003 380 - Verpackung von Lebensmitteln mit einer Vorrichtung zur Markierung des Datums beim Öffnen.",
