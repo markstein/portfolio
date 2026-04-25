@@ -181,11 +181,13 @@ body {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-.skill-tag:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 0 15px var(--accent-glow);
-  color: #fff;
+@media (hover: hover) and (pointer: fine) {
+  .skill-tag:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+    color: #fff;
+  }
 }
 
 /* Skill Search */
