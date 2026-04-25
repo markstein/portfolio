@@ -751,3 +751,59 @@ body.theme-nerd .avatar-image {
 body.theme-nerd .footer {
   background: var(--bg-primary);
 }
+
+/* Vangoque / Bangkok-inspired */
+body.theme-vangoque {
+  --bg-primary: #100b1f;
+  --bg-secondary: #2f1047;
+  --text-primary: #fdf2d5;
+  --text-secondary: #e9c9b8;
+  --accent: #ff9a5c;
+  --accent-glow: rgba(255, 154, 92, 0.35);
+
+  --glass-bg: rgba(24, 10, 35, 0.78);
+  --glass-border: rgba(255, 154, 92, 0.18);
+  --glass-shadow: 0 18px 50px rgba(16, 9, 31, 0.45);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body.theme-vangoque .hero {
+  background: radial-gradient(circle at 30% 20%, rgba(255, 154, 92, 0.15), transparent 25%),
+              radial-gradient(circle at 70% 15%, rgba(18, 255, 220, 0.12), transparent 18%),
+              linear-gradient(180deg, #1c0f2f 0%, #100b1f 100%);
+}
+
+body.theme-vangoque .title {
+  background: linear-gradient(135deg, #ffe8b0, #ffb67a, #ff7d55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.theme-vangoque .subtitle {
+  color: #f0d4b5;
+  letter-spacing: 1.5px;
+}
+
+body.theme-vangoque .slogan {
+  color: #ffb57a;
+}
+
+body.theme-vangoque .skill-tag.selected,
+body.theme-vangoque .tech-tag.matched,
+body.theme-vangoque .deselect-btn:hover {
+  background: var(--accent);
+  color: #121018;
+}
+
+body.theme-vangoque .project-card,
+body.theme-vangoque .other-card,
+body.theme-vangoque .selected-skill-card {
+  background: rgba(35, 14, 54, 0.82);
+  border-color: rgba(255, 154, 92, 0.16);
+}
+
+body.theme-vangoque .footer {
+  background: #160c27;
+}

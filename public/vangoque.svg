@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#23112d"/>
+      <stop offset="100%" stop-color="#7f2f68"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#ffad6c" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bg)"/>
+  <circle cx="240" cy="140" r="90" fill="url(#glow)"/>
+  <path d="M120 320 C 170 240, 310 240, 360 320" fill="none" stroke="#ffb57a" stroke-width="16" stroke-linecap="round" opacity="0.8"/>
+  <path d="M110 340 C 180 260, 300 260, 370 340" fill="none" stroke="#65f0e8" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+  <text x="50%" y="390" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" fill="#ffe8b0" letter-spacing="2">VANGOQUE</text>
+</svg>
