@@ -18,6 +18,7 @@ Die Seite verfügt über vier verschiedene Design-Profile, die über CSS-Variabl
 - **Business:** Clean, hell und professionell (Serifenlose Schrift, Blau-Töne).
 - **Minimalist:** Reduziert auf das Wesentliche (Schwarz/Weiß, viel Whitespace).
 - **Nerd:** Terminal-Style (Monospace-Schrift, grüne Akzente, eckige Formen).
+- **Robot:** Metallisch, eisig und futuristisch (Cyan-Glow, scharfe Kanten, technischer Look).
 
 **Steuerung:**
 - Aktivierung über URL-Anker (z.B. `#nerd`).
