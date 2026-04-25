@@ -290,7 +290,7 @@ function initData(data) {
   }
 }
 
-const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd', 'theme-robot', 'theme-kandinsky'];
+const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd', 'theme-robot', 'theme-kandinsky', 'theme-eco', 'theme-klingon'];
 
 // ── Scroll Year Indicator ──────────────────────────────────────────────────
 let scrollYearEl = null;
@@ -339,33 +339,51 @@ function updateScrollYearIndicator() {
 }
 
 function applyTheme() {
+  const mottos = {
+    'theme-default': "Unus pro omnibus, omnes pro uno",
+    'theme-business': "Präzision. Exzellenz. Innovation.",
+    'theme-minimalist': "Einfachheit ist die höchste Stufe der Vollendung.",
+    'theme-nerd': "10 types of people: those who understand binary, and those who don't.",
+    'theme-robot': "Logik ist der Anfang der Weisheit, nicht das Ende.",
+    'theme-kandinsky': "Farbe ist die Tastatur, die Augen sind die Hämmer.",
+    'theme-eco': "Code im Einklang mit der Natur.",
+    'theme-klingon': "Heghlu'meH QaQ jajvam (Heute ist ein guter Tag zum Sterben)"
+  };
+
   const hash = window.location.hash.toLowerCase().replace('#', '');
   const now = Date.now();
   const lastTime = parseInt(sessionStorage.getItem('portfolio_theme_time') || '0');
   const lastTheme = sessionStorage.getItem('portfolio_theme_name');
-  
+
   document.body.classList.remove(...themes);
 
   let activeTheme = 'theme-default';
 
   // 1. Priority: URL Hash
-  if (['business', 'minimalist', 'nerd', 'robot', 'kandinsky', 'default'].includes(hash)) {
+  if (['business', 'minimalist', 'nerd', 'robot', 'kandinsky', 'eco', 'klingon', 'default'].includes(hash)) {
     activeTheme = `theme-${hash}`;
-  } 
-  // 2. Priority: Cycle if reloaded within 10 seconds
+    window.__activeTheme = activeTheme; // Cache for second call
+  }
+  // 2. Priority: Cached decision for this page load
+  else if (window.__activeTheme) {
+    activeTheme = window.__activeTheme;
+  }
+  // 3. Priority: Fast Reload Iteration
   else if (lastTheme && (now - lastTime < 10000)) {
     const currentIndex = themes.indexOf(lastTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
     activeTheme = themes[nextIndex];
+    window.__activeTheme = activeTheme;
+    sessionStorage.setItem('portfolio_theme_time', now.toString());
+    sessionStorage.setItem('portfolio_theme_name', activeTheme);
   }
-  // 3. Fallback: Keep last theme or start with default
+  // 4. Fallback: Keep last theme or start with default
   else {
     activeTheme = lastTheme || 'theme-default';
+    window.__activeTheme = activeTheme;
+    sessionStorage.setItem('portfolio_theme_time', now.toString());
+    sessionStorage.setItem('portfolio_theme_name', activeTheme);
   }
-
-  // Update session storage for the next reload
-  sessionStorage.setItem('portfolio_theme_time', now.toString());
-  sessionStorage.setItem('portfolio_theme_name', activeTheme);
 
   if (activeTheme !== 'theme-default') {
     document.body.classList.add(activeTheme);
@@ -383,9 +401,19 @@ function applyTheme() {
       avatarImage.src = 'robot.png';
     } else if (activeTheme === 'theme-kandinsky') {
       avatarImage.src = 'kandinsky.png';
+    } else if (activeTheme === 'theme-eco') {
+      avatarImage.src = 'eco.png';
+    } else if (activeTheme === 'theme-klingon') {
+      avatarImage.src = 'klingon.png';
     } else {
       avatarImage.src = 'default.png';
     }
+  }
+
+  const sloganEl = document.querySelector('.slogan');
+  if (sloganEl) {
+    const motto = mottos[activeTheme] || mottos['theme-default'];
+    sloganEl.textContent = `"${motto}"`;
   }
 }
 
@@ -431,6 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       initData(data);
+      applyTheme(); // Ensure theme-specific content is applied
       renderSkills();
       renderProjects();
       renderOthers();
