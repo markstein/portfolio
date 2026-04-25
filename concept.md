@@ -19,6 +19,7 @@ Die Seite verfügt über vier verschiedene Design-Profile, die über CSS-Variabl
 - **Minimalist:** Reduziert auf das Wesentliche (Schwarz/Weiß, viel Whitespace).
 - **Nerd:** Terminal-Style (Monospace-Schrift, grüne Akzente, eckige Formen).
 - **Robot:** Metallisch, eisig und futuristisch (Cyan-Glow, scharfe Kanten, technischer Look).
+- **Kandinsky:** Abstrakt und künstlerisch (Geometrische Formen, Primärfarben, asymmetrische Layouts).
 
 **Steuerung:**
 - Aktivierung über URL-Anker (z.B. `#nerd`).

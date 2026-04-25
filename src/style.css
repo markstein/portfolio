@@ -824,3 +824,101 @@ body.theme-robot .syi-year {
   color: var(--accent);
   text-shadow: 0 0 20px var(--accent);
 }
+
+/* Kandinsky / Abstract */
+body.theme-kandinsky {
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #eee8d5;
+  --text-primary: #073642;
+  --text-secondary: #586e75;
+  --accent: #d33682;
+  --accent-glow: rgba(211, 54, 130, 0.3);
+
+  --glass-bg: #ffffff;
+  --glass-border: #073642;
+  --glass-shadow: 8px 8px 0px rgba(7, 54, 66, 0.2);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body.theme-kandinsky .hero {
+  background: var(--bg-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+body.theme-kandinsky .hero::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(181, 137, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+body.theme-kandinsky .title {
+  color: #b58900;
+  background: none;
+  -webkit-text-fill-color: initial;
+  font-weight: 900;
+  text-shadow: 4px 4px 0px rgba(220, 50, 47, 0.2);
+  letter-spacing: -2px;
+}
+
+body.theme-kandinsky .project-card,
+body.theme-kandinsky .other-card,
+body.theme-kandinsky .selected-skill-card {
+  border: 2px solid var(--text-primary);
+  border-radius: 40px 10px 60px 20px / 20px 50px 10px 40px;
+  background: #ffffff;
+  transform: rotate(-0.5deg);
+  box-shadow: 10px 10px 0px rgba(7, 54, 66, 0.1);
+}
+
+body.theme-kandinsky .project-card:nth-child(even) {
+  transform: rotate(0.8deg);
+  border-color: #268bd2;
+}
+
+body.theme-kandinsky .skill-tag {
+  border: 2px solid var(--text-primary);
+  border-radius: 12px 4px 15px 5px;
+  background: #fff;
+  font-weight: 600;
+}
+
+body.theme-kandinsky .skill-tag.selected {
+  background: #dc322f;
+  border-color: #dc322f;
+  color: #fff;
+  transform: translateY(-5px) rotate(2deg);
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+body.theme-kandinsky .tech-tag.matched {
+  background: #2aa198;
+  color: #fff;
+  border-radius: 0;
+}
+
+body.theme-kandinsky .avatar-image {
+  border-radius: 50%;
+  border: 6px double #b58900;
+  padding: 5px;
+  background: #fff;
+}
+
+body.theme-kandinsky .footer {
+  background: var(--bg-secondary);
+  border-top: 4px solid #b58900;
+}
+
+body.theme-kandinsky .syi-year {
+  color: #dc322f;
+  font-family: var(--font-serif);
+  opacity: 0.4;
+}
