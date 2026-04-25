@@ -20,6 +20,16 @@ function getSkillLevelInfo(months) {
   return { label: 'Junior', percentage: 33, class: 'junior' };
 }
 
+function updateUrlParams() {
+  const url = new URL(window.location);
+  if (selectedSkills.size > 0) {
+    url.searchParams.set('skills', Array.from(selectedSkills).join(','));
+  } else {
+    url.searchParams.delete('skills');
+  }
+  window.history.replaceState({}, '', url);
+}
+
 function renderSkills() {
   const container = document.getElementById('skills-container');
   const searchInput = document.getElementById('skill-search');
@@ -50,6 +60,7 @@ function renderSkills() {
         selectedSkills.add(skill);
         span.classList.add('selected');
       }
+      updateUrlParams();
       renderProjects();
     });
 
@@ -69,6 +80,7 @@ function renderSkills() {
     document.querySelectorAll('.skill-tag.selected').forEach(tag => {
       tag.classList.remove('selected');
     });
+    updateUrlParams();
     renderProjects();
   });
 

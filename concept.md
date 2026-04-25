@@ -30,7 +30,7 @@ Die Seite verfügt über vier verschiedene Design-Profile, die über CSS-Variabl
 - **Filter-Logik:** Durch Klicken auf Skills werden Projekte gefiltert (OR-Logik). Bei Auswahl erscheint ein "Selected Skills"-Bereich mit Statistiken (Anzahl Projekte, Gesamtmonate, letzter Einsatz).
 - **Suche:** Ein dezentes Suchfeld ermöglicht das Filtern der Skill-Liste.
   - **Shortcut:** `CMD/Ctrl + K` fokussiert die Suche und scrollt automatisch zum Skill-Bereich.
-- **URL-Integration:** Vorauswahl von Skills via Query-Parameter (z.B. `?skills=Angular,TypeScript`).
+- **URL-Integration:** Vorauswahl von Skills via Query-Parameter (z.B. `?skills=Angular,TypeScript`). Die URL wird **reaktiv synchronisiert**, d.h. beim Klicken auf Skills wird die URL automatisch aktualisiert (`replaceState`), sodass Filter-Links direkt geteilt werden können.
 
 ### 3.3 Projekt-Präsentation
 - **Timeline:** Die Projekte werden chronologisch (absteigend) sortiert.
