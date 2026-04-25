@@ -38,7 +38,7 @@ function renderSkills() {
     const levelInfo = getSkillLevelInfo(count);
 
     const span = document.createElement('span');
-    span.className = `skill-tag ${levelInfo.class}`;
+    span.className = `skill-tag ${levelInfo.class}${selectedSkills.has(skill) ? ' selected' : ''}`;
 
     span.innerHTML = `${skill} <span class="skill-pie" title="${levelInfo.label}" style="background: conic-gradient(currentColor ${levelInfo.percentage}%, transparent 0);"></span>`;
 
@@ -379,6 +379,16 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   createScrollYearIndicator();
   window.addEventListener('scroll', updateScrollYearIndicator, { passive: true });
+
+  // Pre-select skills from URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const skillsParam = urlParams.get('skills');
+  if (skillsParam) {
+    skillsParam.split(',').forEach(s => {
+      const trimmed = s.trim();
+      if (trimmed) selectedSkills.add(trimmed);
+    });
+  }
 
   const searchInput = document.getElementById('skill-search');
   if (searchInput) {
