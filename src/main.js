@@ -290,7 +290,7 @@ function initData(data) {
   }
 }
 
-const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd', 'theme-vangoque'];
+const themes = ['theme-default', 'theme-business', 'theme-minimalist', 'theme-nerd'];
 
 // ── Scroll Year Indicator ──────────────────────────────────────────────────
 let scrollYearEl = null;
@@ -349,8 +349,8 @@ function applyTheme() {
   let activeTheme = 'theme-default';
 
   // 1. Priority: URL Hash
-  if (['business', 'minimalist', 'nerd', 'default', 'vangoque', 'vangog'].includes(hash)) {
-    activeTheme = `theme-${hash === 'vangog' ? 'vangoque' : hash}`;
+  if (['business', 'minimalist', 'nerd', 'default'].includes(hash)) {
+    activeTheme = `theme-${hash}`;
   } 
   // 2. Priority: Cycle if reloaded within 10 seconds
   else if (lastTheme && (now - lastTime < 10000)) {
@@ -379,8 +379,6 @@ function applyTheme() {
       avatarImage.src = 'minimalist.png';
     } else if (activeTheme === 'theme-nerd') {
       avatarImage.src = 'nerd.png';
-    } else if (activeTheme === 'theme-vangoque') {
-      avatarImage.src = 'vangoque.svg';
     } else {
       avatarImage.src = 'default.png';
     }
