@@ -22,6 +22,8 @@ function getSkillLevelInfo(months) {
 
 function renderSkills() {
   const container = document.getElementById('skills-container');
+  const searchInput = document.getElementById('skill-search');
+  const filter = searchInput ? searchInput.value.toLowerCase() : '';
   container.innerHTML = '';
 
   // Remove existing deselect container if any
@@ -31,6 +33,7 @@ function renderSkills() {
   }
 
   skills.forEach(skill => {
+    if (filter && !skill.toLowerCase().includes(filter)) return;
     const count = skillCounts[skill];
     const levelInfo = getSkillLevelInfo(count);
 
@@ -325,22 +328,32 @@ function updateScrollYearIndicator() {
 
 function applyTheme() {
   const hash = window.location.hash.toLowerCase().replace('#', '');
+  const now = Date.now();
+  const lastTime = parseInt(sessionStorage.getItem('portfolio_theme_time') || '0');
+  const lastTheme = sessionStorage.getItem('portfolio_theme_name');
+  
   document.body.classList.remove(...themes);
 
   let activeTheme = 'theme-default';
 
-  if (hash === 'business') {
-    activeTheme = 'theme-business';
-  } else if (hash === 'minimalist') {
-    activeTheme = 'theme-minimalist';
-  } else if (hash === 'nerd') {
-    activeTheme = 'theme-nerd';
-  } else if (hash === 'default') {
-    activeTheme = 'theme-default';
-  } else {
-    // Randomize if no known hash
-    activeTheme = themes[Math.floor(Math.random() * themes.length)];
+  // 1. Priority: URL Hash
+  if (['business', 'minimalist', 'nerd', 'default'].includes(hash)) {
+    activeTheme = `theme-${hash}`;
+  } 
+  // 2. Priority: Cycle if reloaded within 10 seconds
+  else if (lastTheme && (now - lastTime < 10000)) {
+    const currentIndex = themes.indexOf(lastTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    activeTheme = themes[nextIndex];
   }
+  // 3. Fallback: Keep last theme or start with default
+  else {
+    activeTheme = lastTheme || 'theme-default';
+  }
+
+  // Update session storage for the next reload
+  sessionStorage.setItem('portfolio_theme_time', now.toString());
+  sessionStorage.setItem('portfolio_theme_name', activeTheme);
 
   if (activeTheme !== 'theme-default') {
     document.body.classList.add(activeTheme);
@@ -366,6 +379,22 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   createScrollYearIndicator();
   window.addEventListener('scroll', updateScrollYearIndicator, { passive: true });
+
+  const searchInput = document.getElementById('skill-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      renderSkills();
+    });
+  }
+
+  // Keyboard shortcut CMD/Ctrl + K
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (searchInput) searchInput.focus();
+    }
+  });
+
   fetch('cv.json')
     .then(response => response.json())
     .then(data => {
