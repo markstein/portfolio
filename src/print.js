@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch(`${baseUrl}cv.json`)
     .then(response => {
       if (!response.ok || response.headers.get('content-type')?.includes('text/html')) {
-        return fetch('/cv.json');
+        return fetch('cv.json');
       }
       return response;
     })

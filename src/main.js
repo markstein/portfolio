@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch(`${baseUrl}cv.json`)
     .then(response => {
       if (!response.ok || response.headers.get('content-type')?.includes('text/html')) {
-        return fetch('/cv.json');
+        return fetch('cv.json');
       }
       return response;
     })
@@ -481,49 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSkills();
       renderProjects();
       renderOthers();
-      initPrintActions();
     })
     .catch(error => console.error('Error loading cv.json:', error));
 });
-
-function initPrintActions() {
-  const printBtn = document.getElementById('print-btn');
-  const pdfBtn = document.getElementById('pdf-btn');
-  const footerPrintLink = document.getElementById('footer-print-link');
-
-  const handlePrint = (e) => {
-    if (e) e.preventDefault();
-    window.print();
-  };
-
-  const handlePDF = (e) => {
-    if (e) e.preventDefault();
-    
-    const element = document.body;
-    const opt = {
-      margin: [10, 10],
-      filename: 'Mark_Stein_CV.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { 
-        scale: 2, 
-        useCORS: true,
-        logging: false,
-        letterRendering: true
-      },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
-
-    // Add a class to body for PDF specific tweaks if needed
-    document.body.classList.add('is-generating-pdf');
-    
-    // Generate PDF
-    html2pdf().set(opt).from(element).save().then(() => {
-      document.body.classList.remove('is-generating-pdf');
-    });
-  };
-
-  if (printBtn) printBtn.addEventListener('click', handlePrint);
-  if (footerPrintLink) footerPrintLink.addEventListener('click', handlePrint);
-  if (pdfBtn) pdfBtn.addEventListener('click', handlePDF);
-}
