@@ -434,6 +434,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  if (scrollIndicator) {
+    scrollIndicator.style.cursor = 'pointer';
+    scrollIndicator.addEventListener('click', () => {
+      const skillsTitle = document.querySelector('#skills .section-title');
+      if (skillsTitle) {
+        skillsTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
   const searchInput = document.getElementById('skill-search');
   if (searchInput) {
     searchInput.addEventListener('input', () => {
@@ -446,11 +457,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       if (searchInput) {
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-          skillsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-        searchInput.focus();
+        searchInput.focus({ preventScroll: true });
+      }
+      const skillsTitle = document.querySelector('#skills .section-title');
+      if (skillsTitle) {
+        skillsTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   });
