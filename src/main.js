@@ -464,6 +464,11 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+    // Keyboard shortcut CMD/Ctrl + P for Print View
+    if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+      e.preventDefault();
+      window.location.href = 'print.html';
+    }
   });
 
   const baseUrl = import.meta.env.BASE_URL || '/';
