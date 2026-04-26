@@ -392,21 +392,21 @@ function applyTheme() {
   const avatarImage = document.querySelector('.avatar-image');
   if (avatarImage) {
     if (activeTheme === 'theme-business') {
-      avatarImage.src = 'business.png';
+      avatarImage.src = 'business.jpg';
     } else if (activeTheme === 'theme-minimalist') {
-      avatarImage.src = 'minimalist.png';
+      avatarImage.src = 'minimalist.jpg';
     } else if (activeTheme === 'theme-nerd') {
-      avatarImage.src = 'nerd.png';
+      avatarImage.src = 'nerd.jpg';
     } else if (activeTheme === 'theme-robot') {
-      avatarImage.src = 'robot.png';
+      avatarImage.src = 'robot.jpg';
     } else if (activeTheme === 'theme-kandinsky') {
-      avatarImage.src = 'kandinsky.png';
+      avatarImage.src = 'kandinsky.jpg';
     } else if (activeTheme === 'theme-eco') {
-      avatarImage.src = 'eco.png';
+      avatarImage.src = 'eco.jpg';
     } else if (activeTheme === 'theme-klingon') {
-      avatarImage.src = 'klingon.png';
+      avatarImage.src = 'klingon.jpg';
     } else {
-      avatarImage.src = 'default.png';
+      avatarImage.src = 'default.jpg';
     }
   }
 

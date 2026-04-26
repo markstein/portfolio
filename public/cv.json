@@ -1,7 +1,7 @@
 {
     "person": {
         "name": "Mark Stein",
-        "foto": "assets/images/avatar/Profile-Mark.png",
+        "foto": "default.jpg",
         "motto": "Unus pro omnibus, omnes pro uno"
     },
     "projects": [

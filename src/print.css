@@ -55,7 +55,6 @@ body {
   display: grid;
   grid-template-columns: 70mm 1fr;
   gap: 15mm;
-  min-height: 297mm;
 }
 
 /* Sidebar */
@@ -79,6 +78,8 @@ body {
 
 .sidebar-section {
   margin-bottom: 2rem;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .sidebar-title {
@@ -150,6 +151,7 @@ body {
 .project-item {
   margin-bottom: 1.5rem;
   page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .project-header {
@@ -231,8 +233,54 @@ body {
     margin: 0;
     -webkit-print-color-adjust: exact;
   }
+
+  .cv-container {
+    display: block !important;
+  }
+
+  .sidebar {
+    width: 70mm;
+    float: left;
+    border-right: 1px solid var(--border-color);
+    padding-right: 5mm;
+  }
+
+  .main-content {
+    margin-left: 85mm; /* 70mm + 15mm gap */
+  }
+
+  .sidebar-section, .project-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
   
   .print-actions {
     display: none !important;
   }
+}
+
+/* PDF Generation overrides (when class is on body) */
+.is-generating-pdf .cv-container {
+  display: block !important;
+}
+
+.is-generating-pdf .sidebar {
+  width: 70mm;
+  float: left;
+  border-right: 1px solid var(--border-color);
+  padding-right: 5mm;
+}
+
+.is-generating-pdf .main-content {
+  margin-left: 85mm;
+}
+
+.is-generating-pdf .sidebar-section, 
+.is-generating-pdf .project-item {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.is-generating-pdf .print-actions {
+  display: none !important;
 }

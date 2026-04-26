@@ -129,11 +129,15 @@ function initActions() {
           logging: false,
           letterRendering: true
         },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
       };
 
       // Generate PDF using local html2pdf
-      html2pdf().set(opt).from(element).save();
+      document.body.classList.add('is-generating-pdf');
+      html2pdf().set(opt).from(element).save().then(() => {
+        document.body.classList.remove('is-generating-pdf');
+      });
     });
   }
 }
