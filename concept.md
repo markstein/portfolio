@@ -44,5 +44,13 @@ Die Seite verfügt über vier verschiedene Design-Profile, die über CSS-Variabl
 - **Responsivität:** Optimiert für Mobile (angepasste Grids, kompaktere Skill-Tags).
 - **Animationen:** Dezente Einblendeffekte und Micro-Interaktionen (Hover-Effekte auf Skill-Tags und Projektkarten).
 
+### 3.5 Dedizierte Print-Ansicht
+Um eine professionelle Papierform des Lebenslaufs zu gewährleisten, existiert eine spezialisierte Seite (`print.html`).
+- **Layout:** Klassisches, zweispaltiges CV-Layout (Sidebar für Metadaten, Hauptspalte für Erfahrung).
+- **Typografie:** Optimiert für Druck (Serifen-Schriften für Überschriften, klare Sans-Serif für Fließtext).
+- **Skill-Aggregation:** Alle technischen Skills werden gesammelt, alphabetisch sortiert und kompakt am Ende des Dokuments aufgeführt.
+- **Interaktion:** Dedizierte Buttons für den PDF-Export (via lokaler `html2pdf.js`) und den Browser-Druckdialog. Diese Bedienelemente werden beim Drucken automatisch ausgeblendet.
+- **Datenschutz:** Vollständiger Verzicht auf externe Ressourcen; alle Schriften und Bibliotheken werden lokal vom Server geladen.
+
 ## 4. Wartung & Erweiterung
 Um das Portfolio zu aktualisieren, muss lediglich die `cv.json` angepasst werden. Neue Projekte werden automatisch sortiert und die Skill-Statistiken bei jedem Build/Load neu berechnet.

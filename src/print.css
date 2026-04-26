@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/inter.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/playfair-display-italic.woff2') format('woff2');
+}
+
+:root {
+  --bg-print: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #555555;
+  --accent: #0f4c81;
+  --sidebar-bg: #f8f9fa;
+  --border-color: #eeeeee;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-print);
+  color: var(--text-main);
+  line-height: 1.5;
+  font-size: 10.5pt;
+}
+
+.cv-container {
+  max-width: 210mm; /* A4 width */
+  margin: 0 auto;
+  padding: 0 10mm; /* PDF margins handle top/bottom */
+  display: grid;
+  grid-template-columns: 70mm 1fr;
+  gap: 15mm;
+  min-height: 297mm;
+}
+
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid var(--border-color);
+  padding-right: 5mm;
+}
+
+.avatar-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.avatar-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-content {
+  font-size: 0.9rem;
+}
+
+.sidebar-content ul {
+  list-style: none;
+}
+
+.sidebar-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Main Content */
+.main-content {
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.title {
+  font-size: 1.25rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.motto {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Projects */
+.project-item {
+  margin-bottom: 1.5rem;
+  page-break-inside: avoid;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.project-date {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.project-role-customer {
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  text-align: justify;
+}
+
+.project-skills {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+
+/* Action Buttons (Screen Only) */
+.print-actions {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 1000;
+}
+
+.print-action-btn {
+  background: var(--sidebar-bg);
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.print-action-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .print-actions {
+    display: none !important;
+  }
+}

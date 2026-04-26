@@ -36,6 +36,7 @@ Die KI sollte im Hinterkopf behalten, dass das Frontend die Skill-Level (Junior,
 
 Beim Hinzufügen von Skills sollte darauf geachtet werden, dass die Gesamtmonate die tatsächliche Erfahrung widerspiegeln.
 
-## Weiteres 
 
-- Bei neue Features bzw. Anpassung stets auch concept.md ergänzen.
+## 5. Datenschutz & Lokale Assets
+- **Keine externen Quellen:** Zur Gewährleistung des Datenschutzes dürfen keine externen Fonts (z.B. Google Fonts), CDNs, Scripte oder Bilder von Drittanbietern zur Laufzeit eingebettet werden.
+- **Self-Hosting:** Alle Schriften, Bibliotheken (z.B. `html2pdf.js`) und Assets müssen lokal im Projekt (`/public` oder via Build-Prozess) abgelegt und von dort referenziert werden.
