@@ -29,7 +29,7 @@
   --accent: #0f4c81;
   --sidebar-bg: #f8f9fa;
   --border-color: #eeeeee;
-  
+
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
 }
@@ -49,9 +49,11 @@ body {
 }
 
 .cv-container {
-  max-width: 210mm; /* A4 width */
+  max-width: 210mm;
+  /* A4 width */
   margin: 0 auto;
-  padding: 0 10mm; /* PDF margins handle top/bottom */
+  padding: 0 10mm;
+  /* PDF margins handle top/bottom */
   display: grid;
   grid-template-columns: 70mm 1fr;
   gap: 15mm;
@@ -105,8 +107,7 @@ body {
 }
 
 /* Main Content */
-.main-content {
-}
+.main-content {}
 
 .header {
   margin-bottom: 2.5rem;
@@ -164,6 +165,7 @@ body {
 .project-name {
   font-weight: 700;
   font-size: 1.1rem;
+  width: 60%;
 }
 
 .project-date {
@@ -213,7 +215,7 @@ body {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
 
@@ -228,7 +230,7 @@ body {
     size: A4;
     margin: 0;
   }
-  
+
   body {
     margin: 0;
     -webkit-print-color-adjust: exact;
@@ -246,14 +248,16 @@ body {
   }
 
   .main-content {
-    margin-left: 85mm; /* 70mm + 15mm gap */
+    margin-left: 85mm;
+    /* 70mm + 15mm gap */
   }
 
-  .sidebar-section, .project-item {
+  .sidebar-section,
+  .project-item {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
-  
+
   .print-actions {
     display: none !important;
   }
@@ -275,7 +279,7 @@ body {
   margin-left: 85mm;
 }
 
-.is-generating-pdf .sidebar-section, 
+.is-generating-pdf .sidebar-section,
 .is-generating-pdf .project-item {
   page-break-inside: avoid !important;
   break-inside: avoid !important;
