@@ -111,6 +111,7 @@ function formatDate(dateStr) {
 function initActions() {
   const printBtn = document.getElementById('print-btn');
   const pdfBtn = document.getElementById('pdf-btn');
+  const wordBtn = document.getElementById('word-btn');
 
   if (printBtn) {
     printBtn.addEventListener('click', () => window.print());
@@ -118,26 +119,61 @@ function initActions() {
 
   if (pdfBtn) {
     pdfBtn.addEventListener('click', () => {
-      const element = document.body;
+      const element = document.querySelector('.cv-container');
       const opt = {
-        margin: [20, 10, 20, 10], // 20mm top/bottom, 10mm left/right
+        margin: [20, 10, 20, 10],
         filename: 'Mark_Stein_CV.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          letterRendering: true
-        },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
       };
-
-      // Generate PDF using local html2pdf
       document.body.classList.add('is-generating-pdf');
       html2pdf().set(opt).from(element).save().then(() => {
         document.body.classList.remove('is-generating-pdf');
       });
+    });
+  }
+
+  if (wordBtn) {
+    wordBtn.addEventListener('click', () => {
+      const content = document.querySelector('.cv-container').innerHTML;
+      
+      // Inline styles for Word (limited support, so we simplify)
+      const styles = `
+        <style>
+          @page { size: A4; margin: 2cm; }
+          body { font-family: 'Arial', sans-serif; font-size: 11pt; color: #1a1a1a; }
+          h1 { color: #0f4c81; font-size: 24pt; margin-bottom: 5pt; }
+          h2 { color: #1a1a1a; border-bottom: 2px solid #eeeeee; font-size: 16pt; margin-top: 20pt; margin-bottom: 10pt; }
+          h3 { color: #0f4c81; font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #0f4c81; margin-bottom: 5pt; }
+          .sidebar { width: 30%; float: left; padding-right: 20pt; }
+          .main-content { width: 65%; float: left; }
+          .project-item { margin-bottom: 15pt; }
+          .project-header { font-weight: bold; }
+          .project-role-customer { font-style: italic; color: #0f4c81; }
+          .project-description { text-align: justify; margin-top: 5pt; }
+          .project-skills { font-size: 9pt; color: #555555; font-style: italic; }
+          .avatar-image { width: 100pt; height: 100pt; border-radius: 50%; }
+          ul { list-style-type: none; padding-left: 0; }
+          li { margin-bottom: 5pt; }
+        </style>
+      `;
+
+      const html = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            ${styles}
+          </head>
+          <body>
+            ${content}
+          </body>
+        </html>
+      `;
+
+      const converted = htmlDocx.asBlob(html, { orientation: 'portrait', margins: { top: 720, right: 720, bottom: 720, left: 720 } });
+      saveAs(converted, 'Mark_Stein_CV.docx');
     });
   }
 }

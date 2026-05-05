@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Stein - Lebenslauf</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="./src/print.css">
 </head>
 <body>
@@ -16,6 +17,10 @@
         <button id="pdf-btn" class="print-action-btn">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
             PDF Download
+        </button>
+        <button id="word-btn" class="print-action-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M16 13h-8"></path><path d="M16 17h-8"></path><path d="M10 9h4"></path></svg>
+            Word Download
         </button>
     </div>
 
@@ -49,6 +54,8 @@
     </div>
 
     <script src="js/html2pdf.bundle.min.js"></script>
+    <script src="js/html-docx.js"></script>
+    <script src="js/FileSaver.min.js"></script>
     <script type="module" src="./src/print.js"></script>
 </body>
 </html>
