@@ -2,7 +2,7 @@
     "person": {
         "name": "Mark Stein",
         "foto": "default.jpg",
-        "motto": "Unus pro omnibus, omnes pro uno"
+        "motto": "Präzision. Exzellenz. Innovation."
     },
     "projects": [
         {
@@ -502,8 +502,9 @@
     "me": {
         "Bio": [
             "Familie: Verheiratet, 3 Kinder",
-            "Geboren: 1979 in CCCP",
-            "Sprachen: Deutsch, Russisch, Englisch, Spanisch (Grundkenntnisse)"
+            "Geboren: 1979",
+            "Wohnort: Braunschweig",
+            "Sprachen: Deutsch, Englisch, Russisch, Spanisch (Grundkenntnisse)"
         ],
         "Ausbildung": [
             "2006 - M.Sc. Informatik an der TU Braunschweig",
