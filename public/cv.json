@@ -11,11 +11,12 @@
             "customer": "remote",
             "description": "Migration eines Kundenportals für Verkauf und Verwaltung von Fahrscheinen des öffentlichen Personenverkehrs (ÖPV). Schrittweise Portierung des Bestandsportals auf eine moderne Architektur und aktuelle Web-Technologien.",
             "fromDate": "2023-09-01",
-            "toDate": "2026-04-30",
+            "toDate": "2026-05-31",
             "skills": [
                 "TypeScript",
                 "Node.js",
                 "Vue.js",
+                "Keycloak",
                 "GitLab",
                 "GitLab Pipeline",
                 "Playwright",
@@ -69,6 +70,7 @@
                 "GitHub Actions",
                 "Jira",
                 "Spring Boot",
+                "Keycloak",
                 "Microservices"
             ]
         },
@@ -113,6 +115,7 @@
                 "NgRx",
                 "JSP",
                 "LDAP",
+                "Keycloak",
                 {
                     "name": "Java",
                     "version": "8"
